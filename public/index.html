@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terraform.io Clone</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="antialiased">
+    <header>
+      <div class="bg-gray-light border-b py-4 px-5 sm:px-0">
+        <div class="container mx-auto flex items-center">
+          <svg class=" w-24" viewBox="0 0 125 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M75.027 14.777v8.103h2.907v-8.412c0-2.073-.69-3.432-2.621-3.432-1.24 0-2.955.453-4.242 1.12V6.127l-2.908.405V22.88h2.908v-8.055c1.049-.548 2.312-.977 3.026-.977.668 0 .93.31.93.93zM42.57 16.183v6.697h3.002V7.009H42.57v6.53h-5.886v-6.53h-3.002v15.87h3.002v-6.696h5.886z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M54.175 22.88h2.383v-7.65c0-2.907-1.072-4.194-4.718-4.194-1.287 0-2.884.215-3.98.548l.358 2.216c1.024-.214 2.168-.357 3.216-.357 1.86 0 2.217.453 2.217 1.74v1.215h-2.789c-2.359 0-3.383.905-3.383 3.265 0 2.002.905 3.455 3.026 3.455a6.345 6.345 0 003.456-1.024l.214.786zm-2.669-4.385h2.145v1.716c-.548.31-1.335.596-2.193.596-.905 0-1.167-.358-1.167-1.168 0-.882.262-1.144 1.215-1.144z" fill="#000"></path><path d="M62.182 23.118c-1.24 0-2.93-.286-4.003-.667l.405-2.216c.977.286 2.264.5 3.455.5 1.287 0 1.478-.286 1.478-1.168 0-.714-.143-1.072-2.026-1.525-2.836-.69-3.17-1.406-3.17-3.646 0-2.335 1.025-3.36 4.338-3.36 1.072 0 2.478.143 3.479.405l-.286 2.312c-.882-.167-2.288-.334-3.193-.334-1.263 0-1.478.286-1.478 1 0 .93.072 1.002 1.644 1.407 3.241.858 3.551 1.287 3.551 3.67 0 2.24-.69 3.622-4.194 3.622zM80.08 22.88h2.906V11.274H80.08V22.88zM80.08 9.63h2.906V6.27H80.08v3.36zM90.66 6.77c-3.956 0-5.648 1.692-5.648 4.6v7.149c0 2.907 1.692 4.599 5.648 4.599 1.477 0 3.002-.19 4.313-.524l-.334-2.598c-1.287.239-2.788.405-3.884.405-2.073 0-2.74-.715-2.74-2.406v-6.101c0-1.692.666-2.407 2.74-2.407 1.096 0 2.597.167 3.884.405l.334-2.597a17.95 17.95 0 00-4.313-.525z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M100.931 23.118c-3.98 0-5.052-2.192-5.052-4.575V15.61c0-2.382 1.072-4.575 5.052-4.575 3.979 0 5.052 2.193 5.052 4.575v2.931c0 2.384-1.073 4.576-5.052 4.576zm0-9.603c-1.55 0-2.145.69-2.145 2.001v3.122c0 1.31.596 2.002 2.145 2.002s2.144-.691 2.144-2.002v-3.122c0-1.31-.595-2.001-2.144-2.001z" fill="#000"></path><path d="M110.63 15.397c1.048-.667 1.954-1.191 3.074-1.692l-.286-2.669c-1.025.286-2.407 1.096-3.05 1.525l-.191-1.287h-2.454V22.88h2.907v-7.483z" fill="#000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M124.727 19.02c0 2.573-1.144 4.098-3.836 4.098-1.025 0-2.193-.143-3.098-.333v4.79l-2.907.405V11.274h2.311l.286.978c1.025-.74 2.216-1.216 3.67-1.216 2.335 0 3.574 1.382 3.574 4.028v3.955zm-6.934 1.31c.762.167 1.739.31 2.573.31 1.049 0 1.454-.5 1.454-1.55v-4.098c0-.953-.357-1.477-1.43-1.477-.953 0-1.978.476-2.597 1.048v5.767z" fill="#000"></path><path d="M0 7.196L11.455.587v4.965L4.304 9.68v15.873L0 23.069V7.196z" fill="#000"></path><path d="M16.029.587V13.23h-4.574V8.511l-4.303 2.485v16.196l4.303 2.49V17.078h4.574v4.687l4.303-2.485V3.072L16.03.587z" fill="#000"></path><path d="M27.484 23.079l-11.456 6.608v-4.964l7.152-4.13V4.722l4.304 2.485v15.873z" fill="#000"></path></svg>
+          <a href="#" class=" ml-12 text-gray-600 hidden sm:inline-block text-sm hover:text-gray-800">Browse Products <svg class=" ml-1 w-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a>
+          <a href="#" class=" ml-8 text-gray-600 hidden sm:inline-block text-sm hover:text-gray-800">About HashiCorp</a>
+        </div>
+      </div>
+      <div class="container mx-auto mt-6">
+        <div class="flex items-center justify-between px-5 sm:px-0">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251 61" class="logo" height="50">
+              <path class="text" fill="#000" fill-rule="nonzero" d="M81.78 19.54h-8.89v-5.31H96.7v5.31h-8.9v26.53h-6"></path>
+              <path class="text" fill="#000" fill-rule="nonzero" d="M102.19 41.77c2.415-.012 4.814-.383 7.12-1.1l.91 4.4c-2.745.99-5.642 1.49-8.56 1.48-7.31 0-9.85-3.39-9.85-9V31.4c0-4.92 2.2-9.08 9.66-9.08s9.13 4.35 9.13 9.37v5h-13v1.2c.05 2.78 1.05 3.88 4.59 3.88zM97.65 32h7.41v-1.18c0-2.2-.67-3.73-3.54-3.73s-3.87 1.53-3.87 3.73V32zm28.54-4.33c-2.148.97-4.217 2.102-6.19 3.39v15h-5.83V22.79h4.92l.38 2.58c1.897-1.284 3.955-2.313 6.12-3.06l.6 5.36zm14.24 0c-2.14.97-4.204 2.103-6.17 3.39v15h-5.83V22.79h4.92l.38 2.58c1.897-1.284 3.955-2.313 6.12-3.06l.58 5.36zm19.51 18.4h-4.78l-.43-1.58c-2.062 1.342-4.47 2.058-6.93 2.06-4.25 0-6.07-2.92-6.07-6.93 0-4.73 2.06-6.55 6.79-6.55h5.59v-2.44c0-2.58-.72-3.49-4.45-3.49-2.17.024-4.33.266-6.45.72l-.72-4.45c2.606-.72 5.296-1.09 8-1.1 7.31 0 9.47 2.58 9.47 8.41l-.02 15.35zm-5.83-8.8h-4.3c-1.91 0-2.44.53-2.44 2.29s.53 2.34 2.34 2.34c1.544-.024 3.058-.436 4.4-1.2v-3.43zm23.75-19.79c-1.1-.237-2.224-.364-3.35-.38-2.29 0-2.63 1-2.63 2.77v2.92h5.93l-.33 4.64h-5.59v18.64h-5.83V27.43h-3.73v-4.64h3.73v-3.25c0-4.83 2.25-7.22 7.41-7.22 1.69-.006 3.372.22 5 .67l-.61 4.49zm11.38 29.07c-8 0-10.13-4.4-10.13-9.18v-5.88c0-4.78 2.15-9.18 10.13-9.18s10.13 4.4 10.13 9.18v5.88c.01 4.78-2.15 9.18-10.13 9.18zm0-19.27c-3.11 0-4.3 1.39-4.3 4v6.26c0 2.63 1.2 4 4.3 4 3.1 0 4.3-1.39 4.3-4V31.3c0-2.63-1.19-4.02-4.3-4.02zm25.14.39c-2.14.97-4.204 2.103-6.17 3.39v15h-5.83V22.79h4.92l.38 2.58c1.897-1.284 3.954-2.313 6.12-3.06l.58 5.36zm16.02 18.4V29.82c0-1.24-.53-1.86-1.86-1.86-2.137.254-4.2.934-6.07 2v16.11h-5.83V22.79h4.45l.57 2c2.906-1.47 6.088-2.315 9.34-2.48 1.843-.174 3.6.82 4.4 2.49 2.91-1.49 6.104-2.34 9.37-2.49 3.87 0 5.26 2.72 5.26 6.88v16.88h-5.83V29.82c0-1.24-.53-1.86-1.86-1.86-2.14.236-4.208.917-6.07 2v16.11h-5.87z"></path>
+              <path class="rect-dark" fill="#4040B2" d="M36.4 39.13l16.4-9.46V10.72L36.4 20.2"></path>
+              <path class="rect-light" fill="#5C4EE5" d="M18.2 10.72l16.4 9.48v18.93l-16.4-9.47"></path>
+              <path class="rect-light" fill="#5C4EE5" d="M0 19.09l16.4 9.47V9.62L0 .15m18.2 50.53l16.4 9.47V41.21l-16.4-9.47"></path>
+            </svg>
+          </a>
+          <div class="md:hidden inline-block">
+            <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </div>
+          <div class="md:flex items-center hidden">
+            <nav>
+              <ul class="flex items-center space-x-8 lg:space-x-5 xl:space-x-8 text-sm font-semibold lg:font-normal">
+                <li class="hidden lg:inline-block"><a href="#">Intro</a></li>
+                <li class="inline-block lg:hidden"><a href="#">Info <svg class="w-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a></li>
+                <li class="hidden lg:inline-block"><a href="#">Tutorials</a></li>
+                <li><a href="#">Docs <svg class="w-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></a></li>
+                <li class="hidden lg:inline-block"><a href="#">Community</a></li>
+                <li class="hidden lg:inline-block"><a href="#">Enterprise</a></li>
+                <li><a href="#"><img class="w-4 inline-block align-middle mr-1" src="https://cdn3.iconfinder.com/data/icons/glypho-free/64/drawer-front-download-input-arrow-down-512.png" alt=""> Download</a></li>
+                <li><a href="#"><img class="w-4 inline-block align-middle mr-1" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-512.png" alt=""> GitHub</a></li>
+              </ul>
+            </nav>
+            <a href="#" class="ml-8 border border-purple-dark hover:bg-purple-dark hover:text-white transition ease-in duration-150 inline-block py-2 px-4 text-sm">Sign In</a>
+            <a href="#" class="hidden lg:inline-block ml-4 border border-purple-dark hover:bg-purple-dark transition ease-in duration-150 py-2 px-4 text-sm text-white bg-purple-light">Create Account</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="mt-24 pb-24 px-5">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
+        <div class="w-full lg:w-1/2 pr-10 text-center lg:text-left">
+          <a href="#" class="text-sm"><span class="uppercase px-2 py-1 text-xs inline-block border border-purple-dark mr-1">New</span> Introducing the Terraform Cloud Business tier <svg class="w-4 inline-block align-middle" fill="one" stroke="#623ce4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+          <h1 class="mt-6 mb-2 font-bold text-5xl">Terraform</h1>
+          <p class=" font-light text-lg">Use Infrastructure as Code to provision and manage any cloud, infrastructure, or service</p>
+          <div class="mt-6">
+            <a href="#" class="bg-purple-light mb-3 hover:bg-purple-dark transition ease-in duration-150 text-white text-sm py-4 px-5 sm:mr-5 inline-block">Sign up for Cloud</a>
+            <a href="#" class="text-sm py-4 px-5 border inline-block hover:bg-gray-dark transition ease-in duration-150">Download CLI</a>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 mt-16 lg:mt-0">
+          <div class="text-center mb-8 space-x-5">
+            <a href="#" class="uppercase inline-block border-b-2 border-purple-dark px-3 pb-1">Cloud</a>
+            <a href="#" class="uppercase inline-block border-b-2 px-5 pb-1 text-gray-400">Cli</a>
+          </div>
+          <video autoplay src="https://www.datocms-assets.com/2885/1568036870-1567204661-terraform-overview-hero-cloud.mp4"></video>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-light py-20">
+      <div class="container mx-auto px-5 lg:px-0">
+        <h3 class="text-center text-4xl font-semibold lg:w-1/2 mx-auto">Deliver infrastructure as code with Terraform</h3>
+        <div class="flex flex-col lg:flex-row mt-20 items-center">
+          <div class="w-full lg:w-1/2 lg:pl-24 lg:pr-10">
+            <h3 class="text-4xl font-medium leading-tight">Write declarative <br class="hidden lg:show"/> configuration files</h3>
+            <ul class="my-5 font-light">
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Collaborate and share configurations</li>
+              <li class="my-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Evolve and version your infrastructure</li>
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Automate provisioning</li>
+            </ul>
+            <p class=" font-light">Define infrastructure as code to manage the full lifecycle — create new resources, manage existing ones, and destroy those no longer needed.</p>
+          </div>
+          <div class="w-full lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
+            <img src="https://www.terraform.io/assets/images/terraform-overview/declarative-config-files@4x-1bd3b268.png" alt="">
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row mt-20 items-center">
+          <div class="w-full lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
+            <img src="https://www.terraform.io/assets/images/terraform-overview/plan-changes-to-infrastructure@4x-e8cbc845.png" alt="">
+          </div>
+          <div class="w-full lg:w-1/2 lg:pl-24 lg:pr-10 order-first lg:order-none">
+            <h3 class="text-4xl font-medium leading-tight">Plan and predict changes</h3>
+            <ul class="my-5 font-light">
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Clearly mapped resource dependencies</li>
+              <li class="my-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Separation of plan and apply</li>
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Consistent, repeatable workflow</li>
+            </ul>
+            <p class=" font-light">Terraform provides an elegant user experience for operators to safely and predictably make changes to infrastructure.</p>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row mt-20 items-center">
+          <div class="w-full lg:w-1/2 lg:pl-24 lg:pr-10">
+            <h3 class="text-4xl font-medium leading-tight">Create reproducible infrastructure</h3>
+            <ul class="my-5 font-light">
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Reproducible production, staging, and development environments</li>
+              <li class="my-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Shared modules for common infrastructure patterns</li>
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Combine multiple providers consistently</li>
+            </ul>
+            <p class=" font-light">Terraform makes it easy to re-use configurations for similar infrastructure, helping you avoid mistakes and save time.</p>
+            <a href="#" class="mt-6 text-sm py-3 px-5 border bg-white inline-block hover:bg-gray-dark transition ease-in duration-150">View All Providers</a>
+          </div>
+          <div class="w-full lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
+            <img src="https://www.terraform.io/assets/images/terraform-overview/infrastructure-providers@4x-91e3d4c9.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto py-20 px-5 lg:px-0">
+        <h3 class="text-center text-4xl font-semibold lg:w-1/2 mx-auto">Enhanced Workflow for Teams with Terraform Cloud</h3>
+        <p class="text-center text-xl font-light lg:w-1/2 mx-auto mt-5">Terraform Cloud is a free to use SaaS application that provides the best workflow for writing and building infrastructure as code with Terraform.</p>
+        <div class="flex flex-col lg:flex-row mt-20 items-center">
+          <div class="w-full lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
+            <div class="border p-10">
+              <img src="https://www.terraform.io/assets/images/terraform-overview/workflow-collaboration@4x-66d002b4.png" alt="">
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 lg:pl-24 lg:pr-10 order-first lg:order-none">
+            <h3 class="text-4xl font-medium leading-tight">Share infrastructure as code</h3>
+            <p class=" font-light mt-2 tracking-wide">Empower your team to rapidly review, comment, and iterate on Infrastructure as Code.</p>
+            <ul class="my-5 font-light">
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> State management <span class=" text-xs">(storage, viewing, history, and locking)</span></li>
+              <li class="my-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Web UI for viewing and approving Terraform runs</li>
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Collaborative Runs</li>
+              <li class="mt-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Private module registry</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row mt-20 items-center">
+          <div class="w-full lg:w-1/2 lg:pl-24 lg:pr-10">
+            <h3 class="text-4xl font-medium leading-tight">Automate consistent workflows</h3>
+            <p class=" font-light mt-2 tracking-wide">Create a pipeline for provisioning Infrastructure as Code</p>
+            <ul class="my-5 font-light">
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> VCS integration <span class="text-xs">(Azure DevOps, Bitbucket, GitHub, and GitLab)</span></li>
+              <li class="my-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Enable GitOps workflow</li>
+              <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Remote operations — perform Terraform runs in a consistent, immutable environment</li>
+              <li class="mt-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Notifications for run events <span class="text-xs">(via Slack or webhooks)</span></li>
+              <li class="mt-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> Full HTTP API for integrating with other tools and services</li>
+            </ul>
+          </div>
+          <div class="w-full lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
+            <div class="border p-10">
+              <img src="https://www.terraform.io/assets/images/terraform-overview/automate-the-provisioning-lifecycle@4x-5cc6a17f.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-24">
+          <a href="#" class=" bg-purple-light hover:bg-purple-dark text-white transition ease-in duration-150 inline-block py-4 px-5">Sign up for Terraform Cloud</a>
+        </div>
+      </div>
+    </section>
+    <section class="pt-20 pb-32 px-5 lg:px-0">
+      <div class="container mx-auto">
+        <h3 class="text-center text-4xl font-semibold lg:w-1/2 mx-auto">Terraform for Every Team</h3>
+        <p class="text-center text-xl font-light lg:w-3/5 mx-auto mt-5">Organizations looking for enhanced division of responsibilities or automatic policy enforcement can purchase the Team and Governance upgrades for Terraform Cloud. Start for free and upgrade to suit the needs of your team as you grow.</p>
+        <div class="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20">
+          <div class="bg-gray-light pt-10 pb-5 px-10 flex justify-between flex-col">
+            <div class="mb-32">
+              <h3 class="text-3xl font-semibold">Free</h3>
+              <p class="mt-5 tracking-wider leading-relaxed">Get started on Terraform Cloud for free. Automation and collaboration features to empower individuals and small teams, including VCS integration, remote operations, and state management.</p>
+            </div>
+            <div class="text-sm"><span class="text-4xl font-semibold">$0</span> Up to 5 users</div>
+          </div>
+          <div class="bg-gray-light pt-10 pb-5 px-10 flex justify-between flex-col">
+            <div>
+              <h3 class="text-3xl font-semibold">Team & Governance</h3>
+              <p class="mt-5 tracking-wider leading-relaxed">These tiers introduce basic governance with team management and role based access control (RBAC). Set up custom workspace permissions, or even provisioning policies as code with Sentinel.</p>
+            </div>
+            <div class="text-sm">Starting at <span class="text-4xl font-semibold">$20</span> user/month</div>
+          </div>
+          <div class="bg-gray-light md:col-span-2 lg:col-span-1 pt-10 pb-5 px-10 flex justify-between flex-col">
+            <div>
+              <h3 class="text-3xl font-semibold">Business</h3>
+              <p class="mt-5 tracking-wider leading-relaxed">Use the features and scale of Terraform Enterprise, without hosting it yourself. Connect to public or private clouds. Set up more concurrent runs, SSO, and audit logs.</p>
+            </div>
+            <div>
+              <a href="#" class="inline-block text-purple-light font-semibold text-2xl">Contact Sales</a>
+              <p class="text-sm">for more information</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-24">
+          <a href="#" class=" bg-purple-light hover:bg-purple-dark text-white transition ease-in duration-150 inline-block py-4 px-5">See More Detailed Pricing Information</a>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-light py-20 px-5 lg:px-0">
+      <div class="container mx-auto">
+        <h3 class="text-center text-4xl font-semibold lg:w-1/2 mx-auto">How Terraform Works</h3>
+        <div class="text-center mt-10 space-x-5 flex w-4/5 mx-auto text-sm font-semibold">
+          <a href="#" class="uppercase block w-1/2 text-left border-b-2 border-purple-light px-3 pb-1">Cloud</a>
+          <a href="#" class="uppercase block w-1/2 text-left border-b-2 px-5 pb-1">Cli</a>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:w-4/5 mx-auto mt-10">
+          <div class="w-full lg:w-1/2">
+            <img src="https://www.terraform.io/assets/images/terraform-overview/cloud-howitworks-v4-2x-0cb5bdab.png" alt="">
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h3 class="text-3xl font-semibold">Terraform Cloud</h3>
+            <div class="my-5">
+              <h3 class="text-2xl font-semibold">Write Infrastructure as Code</h3>
+              <p class="tracking-wide leading-relaxed mt-5 font-light">Terraform users define infrastructure in a simple, human-readable configuration language called HCL (HashiCorp Configuration Language). Users can write unique HCL configuration files or borrow existing templates from the public module registry.</p>
+            </div>
+            <div class="my-5">
+              <h3 class="text-2xl font-semibold">Manage Configuration Files in VCS</h3>
+              <p class="tracking-wide leading-relaxed mt-5 font-light">Most users will store their configuration files in a version control system (VCS) repository and connect that repository to a Terraform Cloud workspace. With that connection in place, users can borrow best practices from software engineering to version and iterate on infrastructure as code, using VCS and Terraform Cloud as a delivery pipeline for infrastructure.</p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold">Automate Provisioning</h3>
+              <p class="tracking-wide leading-relaxed mt-5 font-light">When you push changes to a connected VCS repository, Terraform Cloud will automatically trigger a plan in any workspace connected to that repository. This plan can be reviewed for safety and accuracy in the Terraform UI, then it can be applied to provision the specified infrastructure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-32 pb-48 px-5 lg:px-0">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center">
+        <div class="w-full lg:w-1/2">
+          <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/4BCR7Yx4k4o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p class="text-sm mt-5 w-4/5 text-center">Co-Founders Mitchell Hashimoto and Armon Dadgar explain HashiCorp’s commitment to open source</p>
+        </div>
+        <div class="w-full lg:w-1/2 lg:pl-10 order-first mb-10 lg:mb-0">
+          <h3 class="text-5xl font-semibold">Strong Community</h3>
+          <ul class="my-5 font-light">
+            <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> 25,000+ Commits</li>
+            <li class="my-3"><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> 1,000+ Modules</li>
+            <li><img class="inline-block align-middle mr-1" src="https://www.terraform.io/assets/images/terraform-overview/icons/check-circle-purple-38e7c8d2.svg" alt=""> 200+ Providers</li>
+          </ul>
+          <p class="font-light leading-relaxed">Open Source projects benefit from the scrutiny of a broad and diverse user base. Keeping the code available helps to teach and empower the community of users, while it also provides an easy mechanism for feedback, improvement, and customization.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="py-5">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center">
+        <div class="w-1/2">
+          <ul class="flex flex-col lg:flex-row text-center space-y-4 lg:text-left text-sm lg:space-x-6">
+            <li><a href="#">Intro</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Extend</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+        <div class="w-1/2 mt-5 lg:mt-0 text-center lg:text-right">
+          <a href="#" class="text-sm">Edit this page</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
